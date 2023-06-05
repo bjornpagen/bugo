@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="{{.Language}}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="../public/tailwind.css" charset="utf-8">
+  <link rel="stylesheet" href="../public/post.css" charset="utf-8">
+  <title>{{.Title}} | {{.Author}}</title>
+</head>
+
+<body class="body-text_plex-serif">
+  <main>
+    <header>
+      <time datetime="{{.CreatedDateTime}}">
+        {{.CreatedHuman}}
+      </time>
+      <topic>
+        {{.Title}}
+      </topic>
+    </header>
+    <article>
+      {{.Content}}
+    </article>
+    <sig><a href="../index.html">{{.Author}}</a></sig>
+  </main>
+</body>
+
+</html>
