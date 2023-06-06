@@ -349,10 +349,6 @@ article> :first-child {
 
 }
 
-article> :first-child::first-line {
-  line-height: 1.0 !important;
-}
-
 article> :last-child {
   margin-bottom: 0 !important;
   margin-right: 0 !important;
