@@ -23,8 +23,20 @@ import (
 	_ "embed"
 )
 
+var _t1, _t2 *template.Template
+
+//go:embed index.tmpl.html
+var _idxTmpl string
+
 //go:embed post.tmpl.html
 var _postTmpl string
+
+func init() {
+	_t1 = template.New("post")
+	_t1 = template.Must(_t1.Parse(_postTmpl))
+	_t2 = template.New("index")
+	_t2 = template.Must(_t2.Parse(_idxTmpl))
+}
 
 //go:embed public _redirects
 var _fs embed.FS
@@ -90,20 +102,79 @@ func run() error {
 		return err
 	}
 
-	for _, f := range in {
-		err := genFile(f, outPath)
+	ps := make(map[monday.Locale][]string)
+	for _, inPath := range in {
+		strs := strings.SplitN(inPath, "/", 2)
+		title := strings.ReplaceAll(strs[0], "-", " ")
+		locale := monday.Locale(strs[1])
+
+		if _, ok := ps[locale]; !ok {
+			ps[locale] = []string{title}
+			continue
+		}
+
+		ps[locale] = append(ps[locale], title)
+	}
+
+	for k, v := range ps {
+		err = genIndex(k, v, outPath)
 		if err != nil {
-			return nil
+			return err
+		}
+	}
+
+	for _, inPath := range in {
+		err := genPost(inPath, outPath)
+		if err != nil {
+			return err
 		}
 	}
 
 	return nil
 }
 
-func genFile(path, outRoot string) error {
+type Index struct {
+	Author string
+	Locale monday.Locale
+	Titles []string
+}
+
+func (i Index) Language() string {
+	return string(i.Locale)[:2]
+}
+
+func genIndex(l monday.Locale, s []string, outRoot string) error {
+	d := Index{_name, l, s}
+
+	localeOut := filepath.Join(outRoot, string(l))
+	err := os.MkdirAll(localeOut, os.ModePerm)
+	if err != nil {
+		return err
+	}
+
+	out, err := os.Create(filepath.Join(localeOut, "index.html"))
+	if err != nil {
+		return err
+	}
+	defer func() {
+		if e := out.Close(); e != nil {
+			err = e
+		}
+	}()
+
+	_t2.Execute(out, d)
+
+	err = out.Sync()
+	if err != nil {
+		return nil
+	}
+
+	return err
+}
+
+func genPost(path, outRoot string) error {
 	strs := strings.SplitN(path, "/", 2)
-	origTitle := strs[0]
-	title := strings.ReplaceAll(origTitle, "-", " ")
+	title := strings.ReplaceAll(strs[0], "-", " ")
 	locale := monday.Locale(strs[1])
 
 	source, err := os.ReadFile(path)
@@ -135,7 +206,7 @@ func genFile(path, outRoot string) error {
 		return err
 	}
 
-	out, err := os.Create(filepath.Join(localeOut, origTitle+".html"))
+	out, err := os.Create(filepath.Join(localeOut, title+".html"))
 	if err != nil {
 		return err
 	}
@@ -145,10 +216,7 @@ func genFile(path, outRoot string) error {
 		}
 	}()
 
-	t1 := template.New("post")
-	t1 = template.Must(t1.Parse(_postTmpl))
-
-	t1.Execute(out, post)
+	_t1.Execute(out, post)
 
 	err = out.Sync()
 	if err != nil {
