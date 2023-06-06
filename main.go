@@ -26,7 +26,7 @@ import (
 //go:embed post.tmpl.html
 var _postTmpl string
 
-//go:embed public
+//go:embed public _redirects
 var _fs embed.FS
 
 var _md = goldmark.New(
