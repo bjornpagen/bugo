@@ -1,4 +1,4 @@
-module github.com/bjornpagen/blog
+module github.com/bjornpagen/bugo
 
 go 1.20
 
