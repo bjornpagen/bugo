@@ -2,6 +2,7 @@ package main
 
 import (
 	"embed"
+	"errors"
 	"fmt"
 	"io"
 	"os"
@@ -106,7 +107,11 @@ func run() error {
 	for _, inPath := range in {
 		strs := strings.SplitN(inPath, "/", 2)
 		title := strings.ReplaceAll(strs[0], "-", " ")
-		locale := monday.Locale(strs[1])
+		localeStr, ok := strings.CutSuffix(strs[1], ".md")
+		if !ok {
+			return errors.New("not md file")
+		}
+		locale := monday.Locale(localeStr)
 
 		if _, ok := ps[locale]; !ok {
 			ps[locale] = []string{title}
@@ -175,7 +180,11 @@ func genIndex(l monday.Locale, s []string, outRoot string) error {
 func genPost(path, outRoot string) error {
 	strs := strings.SplitN(path, "/", 2)
 	title := strings.ReplaceAll(strs[0], "-", " ")
-	locale := monday.Locale(strs[1])
+	localeStr, ok := strings.CutSuffix(strs[1], ".md")
+	if !ok {
+		return errors.New("not md file")
+	}
+	locale := monday.Locale(localeStr)
 
 	source, err := os.ReadFile(path)
 	if err != nil {
@@ -257,13 +266,13 @@ func creationDate(path string) (t time.Time, err error) {
 
 	b, err := exec.Command("git", args...).Output()
 	if err != nil {
-		return t, fmt.Errorf("get cmd output: %v", err)
+		return t, fmt.Errorf("cmd output: %v", err)
 	}
 	s := strings.TrimSpace(yoloString(b))
 
 	i, err := strconv.ParseInt(s, 10, 64)
 	if err != nil {
-		return t, fmt.Errorf("parse int: %v", err)
+		return t, fmt.Errorf("find commit: %v", err)
 	}
 
 	t = time.Unix(i, 0)

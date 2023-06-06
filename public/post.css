@@ -582,6 +582,15 @@ p.image a:hover img {
 code {
   font-family: plex-mono;
   font-weight: 300;
-  font-size: 1rem);
-  line-height: calc(1rem * var(--golden-ratio-second-root));
+  font-size: calc(1rem / var(--golden-ratio-second-root));
+  line-height: calc(1rem / var(--golden-ratio));
+}
+
+code.language-pgp {
+  display: none;
+}
+
+li>ul:first-of-type,
+li>ol:first-of-type {
+  margin-top: 1rem;
 }
