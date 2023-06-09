@@ -3,6 +3,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-Thin.otf);
   font-style: normal;
   font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-ExtraLight.otf);
   font-style: normal;
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-Light.otf);
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
@@ -24,6 +27,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-Text.otf);
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -31,6 +35,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-Medium.otf);
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,6 +43,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-SemiBold.otf);
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
@@ -45,6 +51,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-Bold.otf);
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
@@ -52,6 +59,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-ThinItalic.otf);
   font-style: italic;
   font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
@@ -59,6 +67,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-ExtraLightItalic.otf);
   font-style: italic;
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
@@ -66,6 +75,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-LightItalic.otf);
   font-style: italic;
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
@@ -73,6 +83,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-TextItalic.otf);
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -80,6 +91,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-MediumItalic.otf);
   font-style: italic;
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
@@ -87,6 +99,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-SemiBoldItalic.otf);
   font-style: italic;
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
@@ -94,6 +107,7 @@
   src: url(font/IBM-Plex-Serif/IBMPlexSerif-BoldItalic.otf);
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
@@ -101,6 +115,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-Thin.otf);
   font-style: normal;
   font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
@@ -108,6 +123,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-ExtraLight.otf);
   font-style: normal;
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
@@ -115,6 +131,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-Light.otf);
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
@@ -122,6 +139,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-Text.otf);
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -129,6 +147,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-Medium.otf);
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
@@ -136,6 +155,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-SemiBold.otf);
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
@@ -143,6 +163,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-Bold.otf);
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
@@ -150,6 +171,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-ThinItalic.otf);
   font-style: italic;
   font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
@@ -157,6 +179,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-ExtraLightItalic.otf);
   font-style: italic;
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
@@ -164,6 +187,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-LightItalic.otf);
   font-style: italic;
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
@@ -171,6 +195,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-TextItalic.otf);
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -178,6 +203,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-MediumItalic.otf);
   font-style: italic;
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
@@ -185,6 +211,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-SemiBoldItalic.otf);
   font-style: italic;
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
@@ -192,6 +219,7 @@
   src: url(font/IBM-Plex-Sans/IBMPlexSans-BoldItalic.otf);
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
@@ -199,6 +227,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-Thin.otf);
   font-style: normal;
   font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
@@ -206,6 +235,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-ExtraLight.otf);
   font-style: normal;
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
@@ -213,6 +243,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-Light.otf);
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
@@ -220,6 +251,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-Text.otf);
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -227,6 +259,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-Medium.otf);
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
@@ -234,6 +267,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-SemiBold.otf);
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
@@ -241,6 +275,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-Bold.otf);
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
@@ -248,6 +283,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-ThinItalic.otf);
   font-style: italic;
   font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
@@ -255,6 +291,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-ExtraLightItalic.otf);
   font-style: italic;
   font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
@@ -262,6 +299,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-LightItalic.otf);
   font-style: italic;
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
@@ -269,6 +307,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-TextItalic.otf);
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
@@ -276,6 +315,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-MediumItalic.otf);
   font-style: italic;
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
@@ -283,6 +323,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-SemiBoldItalic.otf);
   font-style: italic;
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
@@ -290,6 +331,7 @@
   src: url(font/IBM-Plex-Mono/IBMPlexMono-BoldItalic.otf);
   font-style: italic;
   font-weight: 700;
+  font-display: swap;
 }
 
 /* end of fontspam */
