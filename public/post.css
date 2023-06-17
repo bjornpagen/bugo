@@ -621,8 +621,11 @@ p.image a:hover img {
   outline: 1px solid gray;
 }
 
-code {
+pre {
   padding-bottom: 1rem;
+}
+
+code {
   font-family: plex-mono, monospace;
   font-weight: 300;
   font-size: calc(1rem / var(--golden-ratio-second-root));
