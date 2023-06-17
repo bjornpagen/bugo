@@ -622,7 +622,7 @@ p.image a:hover img {
 }
 
 code {
-  font-family: plex-mono;
+  font-family: plex-mono, monospace;
   font-weight: 300;
   font-size: calc(1rem / var(--golden-ratio-second-root));
   line-height: calc(1rem / var(--golden-ratio));
