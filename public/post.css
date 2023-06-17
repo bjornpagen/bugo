@@ -622,6 +622,7 @@ p.image a:hover img {
 }
 
 code {
+  padding-bottom: 1rem;
   font-family: plex-mono, monospace;
   font-weight: 300;
   font-size: calc(1rem / var(--golden-ratio-second-root));
